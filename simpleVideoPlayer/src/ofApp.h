@@ -7,7 +7,10 @@ class ofApp : public ofBaseApp{
 
 	public:
 
+		//NOTE: video must be declared as ofApp member,
+		//in opposite case error occurs
 		ofxWMFVideoPlayer video;
+		
 		void setup();
 		void update();
 		void draw();
