@@ -3,7 +3,10 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-	ofSetFrameRate(55);
+	//We set higher frame rate to see all frames of 30-fps video
+	//because current approach not sync with our screen updates
+	ofSetFrameRate(55);	
+	
 	video.loadMovie("video-ofxShadertoy.mp4");
 	video.setLoop(true);
 	video.play();
