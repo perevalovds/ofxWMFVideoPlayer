@@ -17,7 +17,14 @@ Prior to compiling this example you need to replace the GLEW headers and librari
 On top of that this addon is built against the Direct X SDK of June 2010. You'll need to install it to have the headers required for compiling the example. At the time of writing, you can download it on the [Microsoft website](http://www.microsoft.com/en-us/download/details.aspx?id=6812)
 
 
-## Using the example
+## Using the addon
+
+Addon is linked normally using Project Generator.
+When linking with some addons, for example, ofxOsc, some Unicode-related errors appear.
+To fix this, change project's settings Configuration Properties - General - Character set from 
+"Use Unicode..." to "Not set".
+
+## About the example
 
 Example plays MP4 video from data/bin after start. You can replace it with your video to check.
 
