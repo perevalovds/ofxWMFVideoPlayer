@@ -4,7 +4,8 @@
 void ofApp::setup(){
 
 	ofSetFrameRate(55);
-	video.loadMovie("metaballs-ofxMarchingCubes.mp4");
+	video.loadMovie("video-ofxShadertoy.mp4");
+	video.setLoop(true);
 	video.play();
 
 	
