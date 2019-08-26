@@ -20,9 +20,15 @@ On top of that this addon is built against the Direct X SDK of June 2010. You'll
 ## Using the addon
 
 Addon is linked normally using Project Generator.
-When linking with some addons, for example, ofxOsc, some Unicode-related errors appear.
-To fix this, change project's settings Configuration Properties - General - Character set from 
+When linking with some addons, for example, ofxOsc, then Unicode-related errors appear.
+To fix this, I use this trick:
+1. Create a new project using Project Generator with ofxWMFVideoPlayer only
+and check its compiled well.
+2. "Import" this project using Project Generator again and add addons you need (ofxOsc and others).
+3. Open the project and change the project's settings Configuration Properties - General - Character set from 
 "Use Unicode..." to "Not set".
+
+It looks like some dependencies matter for Unicode, but currently I didn't how to fix it with ofxOsc.
 
 ## About the example
 
