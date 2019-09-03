@@ -344,9 +344,6 @@ LRESULT  ofxWMFVideoPlayer::WndProc(HWND hwnd, UINT message, WPARAM wParam, LPAR
 }
 
 
-
-
-
 //  Create the application window.
 BOOL ofxWMFVideoPlayer::InitInstance()
 {

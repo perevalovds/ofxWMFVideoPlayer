@@ -20,11 +20,9 @@ On top of that this addon is built against the Direct X SDK of June 2010. You'll
 ## Using the addon
 
 Addon is linked normally using Project Generator.
-When linking with some addons, for example, ofxOsc, then Unicode-related errors appear.
-To fix this, change the project's settings Configuration Properties - General - Character set from 
-"Use Unicode..." to "Not set".
-
-Also, twice second compiling helps! (Magic, related with some depencies as I think).
+When working with some other addons, it's additionally required to define unicode straightforward for successfull build:
+1) Add to C/C++ - Preprocessor Definitions: UNICODE;_UNICODE 
+2) Please sure that General - Character set is "Use Unicode Character Set".
 
 ## About the example
 
