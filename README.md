@@ -21,7 +21,7 @@ On top of that this addon is built against the Direct X SDK of June 2010. You'll
 
 Addon is linked normally using Project Generator.
 When working with some other addons, it's additionally required to define unicode straightforward for successfull build:
-1) Add to C/C++ - Preprocessor Definitions: UNICODE;_UNICODE 
+1) Add to C/C++ - Preprocessor Definitions: UNICODE;_UNICODE (it's included into addon_config.mk file, so must set automatically)
 2) Please sure that General - Character set is "Use Unicode Character Set".
 
 ## About the example
