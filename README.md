@@ -9,6 +9,8 @@ oF 0.10.1, Windows 10, tested with NVidia and Intel video cards.
 It was developed by Philippe Laulheret for [Second Story] (http://www.secondstory.com) and is released under MIT licensing. See license.md for more details. 
 For a more comprehensive/technical description of the work, please refer to the file TechnicalDescription.md
 
+(Modified by Denis Perevalov)
+
 ## Prerequisites 
 
 This addons uses the WGL_NV_DX_interop extension, in order to use it you need to upgrade the GLEW library of your openFrameworks folder :
