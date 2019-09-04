@@ -442,7 +442,7 @@ HRESULT CPlayer::Stop()
 }
 
 
-HRESULT CPlayer::setPosition(float pos)
+HRESULT CPlayer::setPosition_sec(float pos)
 {
 	if (m_state == OpenPending)
 	{
@@ -1401,7 +1401,7 @@ float CPlayer::getDuration() {
 	return duration;
 }
 
-float CPlayer::getPosition() {
+float CPlayer::getPosition_sec() {
 	float position = 0.0;
 	if (m_pSession == NULL)
 		return 0.0;

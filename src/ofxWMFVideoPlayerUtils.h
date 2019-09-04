@@ -93,13 +93,13 @@ public:
 
 
 	float getDuration();
-	float getPosition();
+	float getPosition_sec();
 	float getWidth() { return _width; }
 	float getHeight() { 
 		return _height;
 	}
 
-	HRESULT setPosition(float pos);
+	HRESULT setPosition_sec(float pos);
 
 	bool _isLooping;
 	bool isLooping() { return _isLooping; }

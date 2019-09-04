@@ -159,9 +159,7 @@ void ofxWMFVideoPlayer::forceExit()
 	 }
 	 _waitForLoadedToPlay = false;
 
-	 return false;
-
-	
+	 return true;
  }
 
 
@@ -238,17 +236,17 @@ void	ofxWMFVideoPlayer::	pause()
 }
 
 
-float 			ofxWMFVideoPlayer::	getPosition() {
-	return _player->getPosition();
+float 			ofxWMFVideoPlayer::	getPosition_sec() {
+	return _player->getPosition_sec();
 }
 
 float 			ofxWMFVideoPlayer::	getDuration() {
 	return _player->getDuration();
 }
 
-void ofxWMFVideoPlayer::setPosition(float pos)
+void ofxWMFVideoPlayer::setPosition_sec(float pos)
 {
-	_player->setPosition(pos);
+	_player->setPosition_sec(pos);
 }
 
 void ofxWMFVideoPlayer::setVolume(float vol)

@@ -68,11 +68,11 @@ class ofxWMFVideoPlayer {
 	 void				stop();		
 	 void				pause();
 
-	 float				getPosition();
+	 float				getPosition_sec();
 	 float				getDuration();
 	 float				getFrameRate();
 
-	 void				setPosition(float pos);
+	 void				setPosition_sec(float pos);
 
 	 void				setVolume(float vol);
 	 float				getVolume();
