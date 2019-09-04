@@ -13,9 +13,6 @@ For a more comprehensive/technical description of the work, please refer to the 
 
 ## Prerequisites 
 
-This addons uses the WGL_NV_DX_interop extension, in order to use it you need to upgrade the GLEW library of your openFrameworks folder :
-Prior to compiling this example you need to replace the GLEW headers and libraries from your of\libs foler by the one present in the lib folder of this repository.
-
 On top of that this addon is built against the Direct X SDK of June 2010. You'll need to install it to have the headers required for compiling the example. At the time of writing, you can download it on the [Microsoft website](http://www.microsoft.com/en-us/download/details.aspx?id=6812)
 
 
@@ -25,6 +22,10 @@ Addon is linked normally using Project Generator.
 When working with some other addons, it's additionally required to define unicode straightforward for successfull build:
 1) Add to C/C++ - Preprocessor Definitions: UNICODE;_UNICODE (it's included into addon_config.mk file, so must set automatically)
 2) Please sure that General - Character set is "Use Unicode Character Set".
+3) Player's constructor must work after oF app is started, because player requires initialized OpenGL to work.
+	So, don't declare player object "ofxWMFVideoPlayer video;" as a global variable.
+	Instead, declare it as a member of ofApp class (or it's member), 
+	or define it as a pointer and use "video = new ofxWMFVideoPlayer()".
 
 ## About the example
 

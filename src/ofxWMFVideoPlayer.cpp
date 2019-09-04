@@ -40,7 +40,9 @@ ofxWMFVideoPlayer::ofxWMFVideoPlayer() : _player(NULL)
 			if(wglewIsSupported("WGL_NV_DX_interop")){
 				ofLogVerbose("ofxWMFVideoPlayer") << "WGL_NV_DX_interop supported";
 			}else{
-				ofLogError("ofxWMFVideoPlayer") << "WGL_NV_DX_interop not supported. Upgrade your graphc drivers and try again.";
+				ofLogError("ofxWMFVideoPlayer") << "WGL_NV_DX_interop not supported. It may be caused by ofxWMFVideoPlayer constuctor runs before OpenGL initet. Or, if it's ok, then upgrade your graphc drivers and try again.";
+				cout << "(WGL_NV_DX_interop not supported. It may be caused by ofxWMFVideoPlayer constuctor runs before OpenGL initet. Or, if it's ok, then upgrade your graphc drivers and try again.)" << endl;
+
 				return;
 			}
 		}

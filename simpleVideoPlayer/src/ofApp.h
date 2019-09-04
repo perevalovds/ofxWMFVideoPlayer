@@ -7,8 +7,13 @@ class ofApp : public ofBaseApp{
 
 	public:
 
-		//NOTE: video must be declared as ofApp member,
-		//in opposite case error occurs
+		//Player's constructor must work after oF app is started, 
+		//because player requires initialized OpenGL to work.
+		//So, don't declare player object "ofxWMFVideoPlayer video;" 
+		//as a global variable.
+		//Instead, declare it as a member of ofApp class (or it's member), 
+		//or define it as a pointer and use "video = new ofxWMFVideoPlayer()".
+
 		ofxWMFVideoPlayer video;
 		
 		void setup();
