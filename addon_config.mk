@@ -18,7 +18,7 @@ meta:
 	ADDON_NAME = ofxWMFVideoPlayer
 	ADDON_DESCRIPTION = Addon implementing accelerated video player using the Windows Media Foundation API
 	ADDON_AUTHOR = Philippe Laulheret (modified by Denis Perevalov)
-	ADDON_TAGS = "video"
+	ADDON_TAGS = "Video/Camera"
 	ADDON_URL = https://github.com/perevalovds/ofxWMFVideoPlayer.git
 
 common:
