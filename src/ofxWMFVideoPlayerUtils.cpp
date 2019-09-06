@@ -721,6 +721,9 @@ HRESULT CPlayer::OnPresentationEnded(IMFMediaEvent *pEvent)
 		m_pSession->Stop();
 
 		m_state = Stopped;
+
+		//rewind
+		//https://docs.microsoft.com/en-us/windows/win32/medfound/seeking--fast-forward--and-reverse-play
 	}
 	else {
 		//m_pSession->Pause();
