@@ -726,8 +726,8 @@ HRESULT CPlayer::OnPresentationEnded(IMFMediaEvent *pEvent)
 		//https://docs.microsoft.com/en-us/windows/win32/medfound/seeking--fast-forward--and-reverse-play
 	}
 	else {
-		//m_pSession->Pause();
-		//m_state = Paused;
+		m_pSession->Pause();
+		m_state = Paused;
 
 		//Create variant for seeking information
 		PROPVARIANT varStart;
