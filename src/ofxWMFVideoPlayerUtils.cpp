@@ -717,31 +717,39 @@ HRESULT CPlayer::OnTopologyStatus(IMFMediaEvent *pEvent)
 //  Handler for MEEndOfPresentation event.
 HRESULT CPlayer::OnPresentationEnded(IMFMediaEvent *pEvent)
 {
+	if (!_isLooping) {
+		m_pSession->Stop();
 
-		m_pSession->Pause();
-		m_state = Paused;
+		m_state = Stopped;
+	}
+	else {
+		//m_pSession->Pause();
+		//m_state = Paused;
 
 		//Create variant for seeking information
 		PROPVARIANT varStart;
 		PropVariantInit(&varStart);
 		varStart.vt = VT_I8;
 		varStart.hVal.QuadPart = 0; //i.e. seeking to the beginning
-		
+
 		HRESULT hr = S_OK;
-		hr = m_pSession->Start(&GUID_NULL,&varStart);
+		hr = m_pSession->Start(&GUID_NULL, &varStart);
 
 		if FAILED(hr)
 		{
 			ofLogError("ofxWMFVideoPlayerUtils", "Error while looping");
 		}
-		if (!_isLooping) m_pSession->Pause();
-		else m_state = Started;
-		
+		//if (!_isLooping) m_pSession->Pause();
+		//else 
+		m_state = Started;
+
 		PropVariantClear(&varStart);
 
-	
+	}
     // The session puts itself into the stopped state automatically.
    // else m_state = Stopped;
+
+   
     return S_OK;
 }
 
@@ -876,7 +884,7 @@ HRESULT CPlayer::CloseSession()
     return hr;
 }
 
-//  Start playback from the current position. 
+//  Start playback from the beginning    //current position. 
 HRESULT CPlayer::StartPlayback()
 {
     assert(m_pSession != NULL);
