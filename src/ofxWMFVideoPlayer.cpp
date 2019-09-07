@@ -164,7 +164,7 @@ void ofxWMFVideoPlayer::forceExit()
 
 
 
- void ofxWMFVideoPlayer::draw(int x, int y , int w, int h) {
+ void ofxWMFVideoPlayer::draw(float x, float y , float w, float h) {
 
 
 	 _player->m_pEVRPresenter->lockSharedTexture();

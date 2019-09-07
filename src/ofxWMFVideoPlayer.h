@@ -94,8 +94,8 @@ class ofxWMFVideoPlayer {
 
 
 
-	void draw(int x, int y , int w, int h);
-	void draw(int x, int y) { draw(x,y,getWidth(),getHeight()); }
+	void draw(float x, float y , float w, float h);
+	void draw(float x, float y) { draw(x,y,getWidth(),getHeight()); }
 
 
 	HWND getHandle() { return _hwndPlayer;}
