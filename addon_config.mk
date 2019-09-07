@@ -77,4 +77,4 @@ vs:
 	# when parsing the file system looking for sources exclude this for all or
 	# a specific platform
 	ADDON_SOURCES_EXCLUDE = 
-	ADDON_DEFINES = UNICODE;_UNICODE
+	ADDON_DEFINES += UNICODE;_UNICODE
